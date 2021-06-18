@@ -2,7 +2,7 @@ const lightboxEl = document.querySelector(".lightbox");
 const player = document.body.querySelector("amp-story-player");
 
 // To be remplaced with prod values
-const apiEndpoint = 'https://api.zmoozy.com/portal/stories?filter%5Blimit%5D=2&filter%5Boffset%5D=0&filter%5Border%5D%5B0%5D=lastPublishedAt%20desc&filter%5Bwhere%5D%5BchannelId%5D=873&filter%5Bwhere%5D%5BaccessType%5D=1&filter%5Bwhere%5D%5BchannelStructure%5D=1';
+const apiEndpoint = 'https://api.zmoozy.com/portal/stories?filter%5Blimit%5D=10&filter%5Boffset%5D=0&filter%5Border%5D%5B0%5D=lastPublishedAt%20desc&filter%5Bwhere%5D%5BchannelId%5D=873&filter%5Bwhere%5D%5BaccessType%5D=1&filter%5Bwhere%5D%5BchannelStructure%5D=1';
 
 //Subdomain of "aufeminin, needs to be updated, with the brand prod stories location"
 const domain = "https://amp.zmoozy.com";
@@ -51,6 +51,9 @@ function add_stories_to_player(link) {
   player.add([{href: domain + link}]);
 }
 
+player.addEventListener('noNextStory', (event) => {
+  console.log('No more stories found');
+});
 
 // Function adding the onClick event to each "entry-point-card-container" element
 function openPlayer() {
