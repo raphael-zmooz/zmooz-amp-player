@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+    <script async src="https://cdn.ampproject.org/amp-story-player-v0.js"></script>
+    <link href="https://cdn.ampproject.org/amp-story-player-v0.css" rel="stylesheet" type="text/css">
+    </head>
 
-<head>
-  <title>Lightbox Example</title>
-
-  <script async src="https://cdn.ampproject.org/amp-story-player-v0.js"></script>
-  <link href="https://cdn.ampproject.org/amp-story-player-v0.css" rel="stylesheet" type="text/css">
-  <!-- <link rel="stylesheet" type="text/css" href="player.css" media="all"/> -->
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-</head>
-
-<body>
-  <div class="viewport">
-    <div class="entry-point-container">
-      <div class="circular-entry-point">
-        <div class="entry-points" id= "entry-points">
-        </div>
-      </div>
-    </div>
-
-    <div class="lightbox">
-      <amp-story-player class="my-player" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
-        <script type="application/json">
-          {
-            "behavior": {
-              "autoplay": true,
-              "pageScroll": false
+    <body>
+        <div class="lightbox">
+        <amp-story-player class="my-player" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+            <script type="application/json">
+            {
+                "behavior": {
+                "autoplay": true,
+                "pageScroll": false
+                }
             }
-          }
-        </script>
-        <script src="./player.js"></script>
-      </amp-story-player>
-    </div>
-  </div>
-</body>
-
+            </script>
+            <script src="./player.js"></script>
+        </amp-story-player>
+        </div>
+    </body>
 </html>
